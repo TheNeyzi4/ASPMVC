@@ -1,0 +1,16 @@
+﻿@model Customer
+
+@{
+    ViewData["Title"] = "Details Page";
+}
+
+<h2>Детали клиента</h2>
+
+<div>
+    <h4>Имя: @Model.FirstName</h4>
+    <h4>Фамилия: @Model.LastName</h4>
+    <h4>Электронная почта: @Model.Email</h4>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Редактировать</a>
+<a asp-action="Index" class="btn btn-secondary">Назад к списку</a>
